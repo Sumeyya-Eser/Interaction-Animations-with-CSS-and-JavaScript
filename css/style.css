@@ -12,20 +12,170 @@ hp-content {
     justify-content: center;
     align-items:center;
 }
+hp-presentation>hp-slide {
+    display: none;
+}
+hp-presentation>hp-slide.active {
+    display: inline-block;
+}
+
 hp-presentation{
     display:block;
     /*background-color: darkgreen;*/
-    width: 80vmin;
-    height: 80vmin;
+    width: 90vmin;
+    height: 90vmin;
     border:.2em solid #000;
     border-radius: 1em;
 }
 hp-slide {
     display: inline-block;
     /*background-color: darkorange;*/
-    width:80%;
+    width:65%;
     height:80%;
-    margin:10%;
+    margin:16%;
     /*align-items:center;
     justify-content: center;*/
+    font-size: 10vmin;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+}
+hp-chooser{
+    display:flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vmin;
+}
+hp-chooser.fixed {
+    height: auto;
+    
+}
+hp-chooser*{
+    max-width:20%;
+    margin:5% 2.5%;
+
+}
+hp-chooser.fixed>*.chosen{
+
+    max-width:50%;
+    animation-name: chosen_fixed;
+    animation-duration: .5s;
+
+}
+
+@keyframes chosen_fixed {
+    from{
+        max-width: 30%;
+    }
+    to{
+        max-width: 50%;
+    }
+}
+
+hp-chooser.chosen>*.chosen{
+
+    max-width:30%;
+}
+hp-chooser.chosen.animate>*.chosen {
+    animation-name: chosen;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+}
+
+/* starting condition*/
+@keyframes chosen {
+    from {
+        max-width:20%;
+    }
+    to{
+        max-width: 30%;
+    }
+}
+
+hp-chooser.chosen>*:not(.chosen){
+    max-width:16.6%;
+    opacity: .25;
+}
+hp-chooser.fixed>*:not(.chosen){
+    max-width:0%;
+    opacity: .25;
+    animation-name: unchosen_fixed;
+    animation-duration: .5s;
+}
+@keyframes unchosen_fixed {
+
+    from{
+        max-width: 16.6%;
+    }
+    to{
+        max-width: 0%;
+    }
+}
+
+hp-chooser.chosen.animate>*:not(.chosen){
+    animation-name: unchosen;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+}
+
+@keyframes unchosen {
+     from {
+         max-width: 20%;
+         opacity: 1.0;
+     }
+     to{
+         max-width: 16.6%;
+         opacity: .25;
+     }
+    
+}
+
+hp-learn{
+    width: 100%;
+    height: auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+hp-learn hp-learn-no,hp-learn hp-learn-yes {
+    max-width: 20%;
+}
+hp-learn img{
+    max-width: 50%;
+    transition-property: margin;
+    transition-duration: .5s;
+}
+
+hp-learn.match img{
+    margin-top: 5%;
+    margin-right: 14%;
+}
+hp-learn-no,hp-learn-yes{
+    visibility: hidden;
+}
+.learn-yes hp-learn-yes{
+    visibility: visible;
+    color:teal;
+}
+.learn-no hp-learn-no{
+    visibility: visible;
+    color: tomato;
+}
+
+#tfo hp-title {
+    opacity: 0;
+    animation-time:tfo;
+    animation-duration: 2s;
+}
+@keyframes tfo {
+    from{
+        opacity: 1.0;
+    }
+    to{
+        opacity: 0;
+    }
+    
 }

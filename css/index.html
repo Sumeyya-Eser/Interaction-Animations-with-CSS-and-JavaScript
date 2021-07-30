@@ -14,17 +14,74 @@
 
     <hp-content>
         <hp-presentation>
-            <hp-slide>
-            <hp-title> Which shape </hp-title>
-            <hp-chooser>
-                <img src="images/square-15.svg"/>
-                <object data="/images/square-15.svg" type="image/svg+xml" width="100" height="100" class="images"></object>
-               <!--  <img src="images/1227891.svg"/>
-                <img src="images/1227893.svg"/>
-                <img src="images/3410040.svg"/> -->
-            </hp-chooser>
-            <hp-title> doesn't belong ? </hp-title>
-        </hp-slide>
+            <hp-slide class="active">
+                <hp-title> Which place</hp-title>
+                <hp-chooser>
+                    <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/06/23/123886.jpg" width="150" height="150"/>
+                    <img src="https://i.insider.com/5e8f748ddcd88c6aba1caa04?width=1136&format=jpeg" width="150" height="150"/>
+                    <img src="http://cdn.cnn.com/cnnnext/dam/assets/190508160346-most-beautiful-places-in-austria---hallstatt.jpg" width="150" height="150"/>
+                    <img src="https://www.planetware.com/wpimages/2019/11/austria-in-pictures-most-beautiful-places-zell-am-see.jpg" width="150" height="150" >
+                    
+                </hp-chooser>
+                <hp-title> doesn't belong to Austria? </hp-title>
+            </hp-slide>
+            <!-- <div>Something else</div> -->
+            <hp-slide data-autoadvance="3500">
+                <hp-title> Which place </hp-title>
+                <hp-chooser class="chosen animate">
+                    <img src="https://i.insider.com/5e8f748ddcd88c6aba1caa04?width=1136&format=jpeg" />
+                    <img class="chosen" src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/06/23/123886.jpg"/>
+                    <img src="http://cdn.cnn.com/cnnnext/dam/assets/190508160346-most-beautiful-places-in-austria---hallstatt.jpg" />
+                    <img src="https://www.nature.com/immersive/d41586-021-00095-y/assets/3TP4N718ac/2021-01-xx_jan-iom_tree-of-life_sh-1080x1440.jpeg" />
+                </hp-chooser>
+                <hp-title> doesn't belong to Austria? </hp-title>
+            </hp-slide>
+            <hp-slide data-autoadvance="animationend">
+                <hp-title> How did </hp-title>
+                <hp-chooser class="fixed">
+                    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2020/03/pantry-recipes-2.jpg"  />
+                    <img class="chosen" src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/06/23/123886.jpg" />
+                    <img src="https://analyticsindiamag.com/wp-content/uploads/2020/10/7d744a684fe03ebc7e8de545f97739dd.jpg" />
+                    <img src="https://www.planetware.com/wpimages/2019/11/austria-in-pictures-most-beautiful-places-zell-am-see.jpg"  />
+                </hp-chooser>
+                <hp-title> you know ? </hp-title>
+            </hp-slide>
+            <hp-slide data-autoadvance="1500">
+                <hp-title> How did </hp-title>
+                <hp-learn class="match">
+                    <hp-learn-no>no</hp-learn-no>
+                    <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/06/23/123886.jpg" />
+                    <hp-learn-yes>yes</hp-learn-yes>
+                </hp-learn>
+                <hp-title> you know ? </hp-title>
+            </hp-slide>
+            <hp-slide id="tfo" data-autoadvance="animationend">
+                <hp-title> How did </hp-title>
+                <hp-learn >
+                    <hp-learn-no>no</hp-learn-no>
+                    <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/06/23/123886.jpg" />
+                    <hp-learn-yes>yes</hp-learn-yes>
+                </hp-learn>
+                <hp-title> you know ? </hp-title>
+            </hp-slide>
+            <hp-slide >
+                <hp-title data-autoadvance="1500"> Answer: You </hp-title>
+                <hp-learn >
+                    <hp-learn-no>no</hp-learn-no>
+                    <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/06/23/123886.jpg" />
+                    <hp-learn-yes>yes</hp-learn-yes>
+                </hp-learn>
+                <hp-title> learned. </hp-title>
+            </hp-slide>
+            <hp-slide data-onshow="runLearningSequence" >
+                <hp-title> Answer: You </hp-title>
+                <hp-learn >
+                    <hp-learn-no>no</hp-learn-no>
+                    <img src="https://idsb.tmgrup.com.tr/ly/uploads/images/2021/06/23/123886.jpg" />
+                    <hp-learn-yes>yes</hp-learn-yes>
+                </hp-learn>
+                <hp-title> learned. </hp-title>
+            </hp-slide>
         </hp-presentation>
     </hp-content>
 
