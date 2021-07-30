@@ -1,0 +1,31 @@
+html,body {
+    margin:0;
+    padding:0;
+}
+
+hp-content {
+    display:flex;
+   /* background-color:darkgrey;*/
+
+    width:100vw;
+    height:100vh;
+    justify-content: center;
+    align-items:center;
+}
+hp-presentation{
+    display:block;
+    /*background-color: darkgreen;*/
+    width: 80vmin;
+    height: 80vmin;
+    border:.2em solid #000;
+    border-radius: 1em;
+}
+hp-slide {
+    display: inline-block;
+    /*background-color: darkorange;*/
+    width:80%;
+    height:80%;
+    margin:10%;
+    /*align-items:center;
+    justify-content: center;*/
+}
